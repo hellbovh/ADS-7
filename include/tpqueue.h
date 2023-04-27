@@ -11,6 +11,7 @@ class TPQueue {
         Item* next;
     };
     Item* head;
+    T pop_value;
     TPQueue::Item* create(const T&);
 
  public:
@@ -58,10 +59,10 @@ const T& TPQueue<T>::pop() {
         throw std::string("Queue is empty");
     } else {
         Item* next_head = head->next;
-        T value = head->value;
+        pop_value = head->value;
         delete head;
         head = next_head;
-        return value;
+        return pop_value;
     }
 }
 
