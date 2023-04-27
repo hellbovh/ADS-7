@@ -15,7 +15,7 @@ class TPQueue {
 
  public:
     TPQueue(): head(nullptr) {}
-    ~TPQueue() {}
+    ~TPQueue();
     void push(const T&);
     const T& pop();
 };
